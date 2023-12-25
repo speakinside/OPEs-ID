@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "OPEs-ID"
+authors = [{ name = "Xiong Yinran", email = "xiongyinran@hotmail.com" }]
+description = """OPEs-ID is a user-friendly software based on fragments-dependent nontargeted screening and in silico fragmentation scoring (provided by Metfrag), \
+                 aiming to provide a one-stop solution for the identification of OPEs based on LC-HRMS DDA data. \
+                 More refer to https://doi.org/10.1016/j.jhazmat.2023.133275""" 
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+dependencies = [
+    "rdkit",
+    "pandas",
+    "scipy",
+    "pymzml",
+    "python-constraint",
+    "tqdm",
+    "nest_asyncio",
+    "openpyxl",
+    "requests",
+    "numpy",
+    "joblib",
+]
+dynamic = ["version", "readme"]
+
+[tool.setuptools.dynamic]
+# version = { attr = "OPEs_ID.__VERSION__" }
+readme = {file = "README.md"}
+
+[project.optional-dependencies]
+gui = ['PySide6']
+
+[project.gui-scripts]
+OPEs_ID_gui = "OPEs_ID.gui:main"
+
+[tool.setuptools_scm]
