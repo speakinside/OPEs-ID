@@ -42,6 +42,8 @@ pip install "OPEs_ID[gui] @ git+https://github.com/speakinside/OPEs-ID.git"
 
 to install the optional dependency for running the simple GUI script shipping with `OPEs-ID`.
 
+There is also a ready-to-use GUI package for Windows which can be downloaded [here](https://github.com/speakinside/OPEs-ID/releases).
+
 ### Using
 
 #### As a python lib
